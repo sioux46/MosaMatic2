@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaïque de Couleurs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Générateur de Mosaïque</h1>
+        <div class="row mb-3">
+            <div class="col">
+                <button id="randomBtn" class="btn btn-primary btn-block">Générer aléatoirement</button>
+            </div>
+            <div class="col">
+                <button id="clearBtn" class="btn btn-danger btn-block">Effacer</button>
+            </div>
+            <div class="col">
+                <button id="exportBtn" class="btn btn-success btn-block">Exporter en PNG</button>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <input type="number" id="height" class="form-control" placeholder="Hauteur (H)" value="10">
+            </div>
+            <div class="col">
+                <input type="number" id="width" class="form-control" placeholder="Largeur (L)" value="10">
+            </div>
+        </div>
+        <div id="mosaic-container" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
