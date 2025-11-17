@@ -79,6 +79,8 @@ function renderGrid(grid, H, L) {
       else if ( H < 120 || L < 120 ) borderPix = "1px";
       else borderPix = "0px";
 
+      // borderPix = "0px";
+
 
       let html = `<div id="mosaic" style="grid-template-columns: repeat(${L}, 1fr);">`;
 
@@ -118,18 +120,20 @@ function renderGrid(grid, H, L) {
       });
   }
 
-  $("#randomBtn").click(() => {
-      const H = +$("#height").val();
-      const L = +$("#width").val();
-      const grid = generateGrid(H, L);
-      renderGrid(grid, H, L);
-  });
+  $(document).ready(function () {
+    $("#randomBtn").click(() => {
+        const H = +$("#height").val();
+        const L = +$("#width").val();
+        const grid = generateGrid(H, L);
+        renderGrid(grid, H, L);
+    });
 
-  $("#exportBtn").click(() => {
-      html2canvas(document.querySelector("#mosaic")).then(canvas => {
-          const a = document.createElement("a");
-          a.href = canvas.toDataURL("image/png");
-          a.download = "mosaic.png";
-          a.click();
-      });
-  });
+    $("#exportBtn").click(() => {
+        html2canvas(document.querySelector("#mosaic")).then(canvas => {
+            const a = document.createElement("a");
+            a.href = canvas.toDataURL("image/png");
+            a.download = "mosaic.png";
+            a.click();
+        });
+    });
+});
