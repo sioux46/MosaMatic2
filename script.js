@@ -93,7 +93,7 @@ function renderGrid(grid, H, L) {
       });
   });
   html += `</div>`;
-  $("#mosaic-container").html(html);
+  $("#mosaicContainer").html(html);
 
   $(".tile").each(function (index) {
       let tile = this;
@@ -130,6 +130,7 @@ function changeColor(type, val) {
   }
 }
 
+/////////////////////////////////////////////////////////////////// R E A D Y
 $(document).ready(function () {
 
   $(document).on("change", "#color1", function(e) {
@@ -166,4 +167,13 @@ $(document).ready(function () {
           a.click();
       });
   });
+
+  $("#clearBtn").click(() => {
+    $("#mosaicContainer").html("");
+  });
+
+///////////////////////////////////////
+
+
+
 });
