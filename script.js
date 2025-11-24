@@ -133,20 +133,20 @@ function changeColor(type, val) {
 /////////////////////////////////////////////////////////////////// R E A D Y
 $(document).ready(function () {
 
-  $(document).on("change", "#color1", function(e) {
+  $(document).on("input", "#color1", function(e) {
     changeColor("_1", this.value);
   });
-  $(document).on("change", "#color2", function(e) {
+  $(document).on("input", "#color2", function(e) {
     changeColor("_2", this.value);
   });
-  $(document).on("change", "#color3", function(e) {
+  $(document).on("input", "#color3", function(e) {
     changeColor("_3", this.value);
   });
-  $(document).on("change", "#color4", function(e) {
+  $(document).on("input", "#color4", function(e) {
     changeColor("_4", this.value);
   });
 
-  $("h1").click(() => {
+  $("span").click(() => {
     // window.location = "http://localhost:8888/MosaMatic/";
     if ( window.location.href.lastIndexOf("8888") == -1 )
         window.location = "https://www.siouxlog.fr/MosaMatic/";
@@ -171,6 +171,8 @@ $(document).ready(function () {
   $("#clearBtn").click(() => {
     $("#mosaicContainer").html("");
   });
+
+  $("#randomBtn").trigger("click");
 
 ///////////////////////////////////////
 

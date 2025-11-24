@@ -11,6 +11,12 @@
   border: none;
 }
 
-h1 {
+.color-input,
+span {
   cursor: pointer;
+}
+
+h6 {
+  position: relative;
+  top: -10px;
 }

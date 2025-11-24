@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MosaMatic2</title>
+    <title>MosaMatic clasique</title>
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-4 mb-5">
-      <h1 class="text-center mb-4">MosaMatic2</h1>
+    <div class="container-fluid mt-4 mb-5" style="position: relative; top: -20px;">
+      <h1 class="text-center" style="margin-bottom:0;"><span>MosaMatic</span></h1>
+      <h6 class="text-center">Classique</h6>
       <!---->
+      <div id="mosaicContainer"  style="position: relative; top: -20px;"></div>
+      <div  class="mt-2">
       <div class="row mb-3">
           <div class="col-md-3 col-sm-6 mb-2">
               <label for="color1">Couleur 1x1</label>
-              <input type="color" id="color1" onchange="" value="#9d947d" class="form-control color-input">
+              <input type="color" id="color1" onchange="" value="#dbc07b" class="form-control color-input">
           </div>
           <div class="col-md-3 col-sm-6 mb-2">
               <label for="color2">Couleur 2x2</label>
@@ -59,7 +62,7 @@
               <button id="randomBtn" class="btn btn-primary w-100 mt-2">Génération de la mosaïque</button>
           </div>
       </div>
-      <div id="mosaicContainer"></div>
+      </div>
     <!---->
     </div>
     <!---->
